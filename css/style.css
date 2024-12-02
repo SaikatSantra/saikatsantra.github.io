@@ -18,8 +18,8 @@ a {
 :root {
   --font-p: "Poppins", sans-serif;
   --h1: 5rem;
-  --h3: 2.5rem;
-  --p: 2rem;
+  --h3: 2rem;
+  --p: 1.5rem;
   --root: #e63946;
   /* --green: #27ae60; */
   --black: #444;
@@ -385,9 +385,10 @@ svg.fab.fa-shopify {
 /* *service section styles* */
 .service .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  grid-template-columns: repeat(3, minmax(27rem, 1fr));
   gap: 2rem;
 }
+
 
 .service .box-container .box {
   padding: 2rem;
@@ -421,12 +422,19 @@ svg.fab.fa-shopify {
 
 .service .box-container .box i {
   font-size: 4rem;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
   color: #fff;
 }
 
 .service .box-container .box p {
   margin-top: 1.5rem;
+}
+
+.service .box-container .box  ul {
+  margin-top: 1.5rem;
+}
+.service .box-container .box  ul li{
+  list-style: none;
 }
 
 /* *experience section styles* */
@@ -477,10 +485,11 @@ svg.fab.fa-shopify {
 
 /* *portfolio section styles* */
 .portfolio .box-container {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   gap: 2rem;
   margin: 2rem 0;
+  grid-template-columns: repeat(3, minmax(27rem, 1fr));
 }
 
 .portfolio .box-container .box {
@@ -512,7 +521,7 @@ svg.fab.fa-shopify {
   position: absolute;
   bottom: 1rem;
   left: 2rem;
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -695,4 +704,16 @@ footer span {
   #loading {
     background-size: 120px 120px;
   }
+}
+
+
+.home .share a:hover svg {
+  fill: var(--root);
+}
+
+.home .share a svg {
+  width: 29px;
+  height: auto;
+  margin-bottom: -5px;
+  fill: var(--black);
 }
